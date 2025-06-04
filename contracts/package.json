@@ -1,0 +1,13 @@
+{
+  "name": "@kiwarilabs/stateful-contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kiwari Labs",
+  "description": "",
+  "copyright.owner": "Kiwari Labs"
+}

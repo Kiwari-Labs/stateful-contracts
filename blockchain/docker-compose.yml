@@ -1,0 +1,40 @@
+# This docker-compose is for testing purpose only. do not use key from this config for the production environment.
+x-besu: &besu
+  # image: hyperledger/besu:latest
+  image: kiwarilabs/besu:25.4-develop-e1b597e
+  networks:
+    - besu-network
+
+services:
+  besu-validator:
+    <<: *besu
+    hostname: validator
+    volumes:
+      - "./config/genesis.json:/config/genesis.json:ro"
+      - "./config/conf.validator.toml:/config/conf.toml:ro"
+      - "./keystore/key:/config/keystore/key"
+      - "./data/validator:/data"
+    command:
+      - "--config-file=/config/conf.toml"
+      - "--node-private-key-file=/config/keystore/key"
+      - "--miner-enabled=true"
+      - "--miner-coinbase=0xEDFAA84E3E8d6d23Fa0b5A2b66D988f9557362A5"
+
+  besu-node-1:
+    <<: *besu
+    hostname: node-1
+    volumes:
+      - "./config/genesis.json:/config/genesis.json:ro"
+      - "./config/conf.rpc.toml:/config/conf.toml:ro"
+      - "./data/node:/data"
+    command:
+      - "--config-file=/config/conf.toml"
+      - "--Xdns-enabled=true"
+      - "--Xdns-update-enabled=true"
+      - "--bootnodes=enode://781d10c3678bfd2476f87dc6ad7df4809b5d7be6e8f0974af1a52fd21fa21f91b11bd266165b32b3a3c5aaf2143ddcc9133e144e732ed669d8d93a00b457c279@validator:30303"
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+networks:
+  besu-network:
+    driver: bridge
