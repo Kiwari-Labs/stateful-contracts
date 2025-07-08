@@ -34,7 +34,7 @@ rpc-ws-host = "0.0.0.0"
 [txpool]
 tx-pool = "SEQUENCED"
 tx-pool-max-size = "20000"
-tx-pool-disable-locals = true
+tx-pool-no-local-priority = true
 
 [experiment]
 Xdns-enabled = "true"
