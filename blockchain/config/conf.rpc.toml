@@ -14,7 +14,7 @@ rpc-http-api = [
     "TRACE",
     "TXPOOL",
 ]
-logging = "INFO"
+logging = "DEBUG"
 rpc-http-enabled = true
 rpc-http-host = "0.0.0.0"
 rpc-http-cors-origins = ["*"]

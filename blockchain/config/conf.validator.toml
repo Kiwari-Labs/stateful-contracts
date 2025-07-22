@@ -8,7 +8,7 @@ data-storage-format = "FOREST"
 miner-enabled = true
 
 [rpc]
-logging = "INFO"
+logging = "DEBUG"
 rpc-http-api = [
     "ETH",
     "NET",

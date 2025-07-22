@@ -13,6 +13,7 @@
     "berlinBlock": 0,
     "londonBlock": 0,
     "zeroBaseFee": true,
+    "fixedBaseFee": true,
     "clique": {
       "blockperiodseconds": 2,
       "epochlength": 3000,
