@@ -31,7 +31,7 @@ interface IGasFeeGrant {
      * @param granter The address that is granting the fee allowance.
      * @param grantee The address receiving the gas fee allowance.
      * @param program The contract address where the granted allowance can be used.
-     * @param spendLimit The total amount of gas fees that can be spent under this grant.
+     * @param spendLimit The total amount of gas fees in wei that can be spent per transaction.
      * @param period The duration (in blocks) defining the reset period for periodic allowances.
      * @param periodLimit The maximum spendable amount per period for periodic allowances.
      * @param endTime The block number when the grant will expire.
