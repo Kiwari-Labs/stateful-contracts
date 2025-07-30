@@ -124,4 +124,4 @@ The `NativeMinter` and `contractRatio` of `RevenueRatio` should be used with cau
 
 ## Copyright
 
-Copyright 2025 Kiwari Labs Licensed under the [MIT](./LICENSE).
+Copyright 2025 Kiwari Labs and Advanced Info Services PLC Licensed under the [MIT](./LICENSE).
